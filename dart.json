@@ -1,0 +1,484 @@
+{
+	"创建FutureBuilder": {
+		"prefix": "fb",
+		"body": [
+			"FutureBuilder(",
+			"  future: null,",
+			"  initialData: null,",
+			"  builder: (BuildContext context, AsyncSnapshot snapshot) {",
+			"    return $1;",
+			"  },",
+			");"
+		],
+		"description": "创建FutureBuilder"
+	},
+	"创建RcStreamBuilder": {
+		"prefix": "rcsb",
+		"body": [
+			"RcStreamBuilder(",
+			"  stream: $1,",
+			"  builder: (BuildContext context, dynamic snapshot) {",
+			"    return $3;",
+			"  },",
+			"),"
+		],
+		"description": "创建StreamBuilder"
+	},
+	"创建StreamBuilder": {
+		"prefix": "sb",
+		"body": [
+			"StreamBuilder(",
+			"  stream: $1,",
+			"  initialData: $2,",
+			"  builder: (BuildContext context, AsyncSnapshot snapshot) {",
+			"    return $3;",
+			"  },",
+			");"
+		],
+		"description": "创建StreamBuilder"
+	},
+	"创建Center": {
+		"prefix": "cent",
+		"body": [
+			"Center(",
+			"    child: $1,",
+			"),"
+		],
+		"description": "创建Center"
+	},
+	"创建Column": {
+		"prefix": "col",
+		"body": [
+			"Column(",
+			"    children: [$1],",
+			"),"
+		],
+		"description": "创建Column"
+	},
+	"创建RcSparatedColumn": {
+		"prefix": "spcol",
+		"body": [
+			"RcSparatedColumn(",
+			"    itemCount: 1,",
+			"    separatorBuilder: (context, int index) {},",
+			"    itemBuilder: (context, int index) {},",
+			"),"
+		],
+		"description": "创建RcSparatedColumn"
+	},
+	"创建Row": {
+		"prefix": "row",
+		"body": [
+			"Row(",
+			"  children: [],",
+			"),"
+		],
+		"description": "创建Row"
+	},
+	"创建RcSparatedRow": {
+		"prefix": "sprow",
+		"body": [
+			"RcSparatedRow(",
+			"    itemCount: 1,",
+			"    separatorBuilder: (context, int index) {},",
+			"    itemBuilder: (context, int index) {},",
+			"),"
+		],
+		"description": "创建RcSparatedRow"
+	},
+	"创建完整的Container": {
+		"prefix": "cont",
+		"body": [
+			"Container(",
+			"  width: $1,",
+			"  height: $2,",
+			"  decoration: BoxDecoration(",
+			"    color: Colors.$3,",
+			"    border: Border.all(",
+			"      color: Colors.$3,",
+			"      width: $4, ",
+			"    ),",
+			"  ),",
+			"  child: $5,",
+			");"
+		],
+		"description": "创建完整的Container"
+	},
+	"创建基本的ListView": {
+		"prefix": "lv",
+		"body": [
+			"ListView(",
+			"  children: <Widget>[",
+			"   $1",
+			"  ],",
+			")"
+		],
+		"description": "创建基本的ListView"
+	},
+	"创建ListView.builder": {
+		"prefix": "lvb",
+		"body": [
+			"ListView.builder(",
+			"   padding: EdgeInsets.all(0),",
+			"   itemCount: $1,",
+			"   itemBuilder: (BuildContext context, int index) {",
+			"     return $2;",
+			"   },",
+			");"
+		],
+		"description": "创建ListView.builder"
+	},
+	"创建带分割线的ListView.separated": {
+		"prefix": "lvsp",
+		"body": [
+			"ListView.separated(",
+			"   shrinkWrap: true,",
+			"   itemCount: $1,",
+			"   itemBuilder: (context,int index){ ",
+			"   return $2;",
+			"   },",
+			"   separatorBuilder: (context,int index){ ",
+			"   return RcDivider()$3;",
+			"   },",
+			")"
+		],
+		"description": "创建带分割线的ListView.separated"
+	},
+	"创建RadioListTile，可以单选的item": {
+		"prefix": "lvr",
+		"body": [
+			"  //TODO:以下代码要写在State类里面",
+			"  Widget items() {",
+			"    return Column(",
+			"      // In the build function of that State",
+			"      children: <Widget>[",
+			"        RadioListTile<SingingCharacter>(",
+			"          title: const Text('$1'),",
+			"          value: SingingCharacter.title1,",
+			"          groupValue: _character,",
+			"          onChanged: (SingingCharacter value) {",
+			"            setState(() {",
+			"              _character = value;",
+			"            });",
+			"          },",
+			"        ),",
+			"        RadioListTile<SingingCharacter>(",
+			"          title: const Text('$2'),",
+			"          value: SingingCharacter.title2,",
+			"          groupValue: _character,",
+			"          onChanged: (SingingCharacter value) {",
+			"            setState(() {",
+			"              _character = value;",
+			"            });",
+			"          },",
+			"        ),",
+			"      ],",
+			"    );",
+			"  }",
+			"",
+			"  // In the State of a stateful widget:",
+			"  SingingCharacter _character = SingingCharacter.title1;",
+			"",
+			"// TODO: 这个类写在State类外面",
+			"enum SingingCharacter { title1, title2 }"
+		],
+		"description": "创建RadioListTile，可以单选的item"
+	},
+	"创建带有ListTile的ListView": {
+		"prefix": "lvt",
+		"body": [
+			"ListView(",
+			"  children: <Widget>[",
+			"    ListTile(",
+			"      leading: Icon(Icons.$1),",
+			"      title: Text('$title$'),",
+			"      subtitle: Text('$2'),",
+			"      // 右边的图标",
+			"      trailing: Icon(Icons.$1),",
+			"      onTap: () {",
+			"        //TODO:这里处理点击事件",
+			"      },",
+			"      onLongPress: () {",
+			"        //TODO:这里处理长按事件",
+			"      },",
+			"      selected: true,",
+			"    ),",
+			"  ],",
+			");"
+		],
+		"description": "创建带有各种ListTile的ListView"
+	},
+	"创建带有CheckboxListTile的ListView": {
+		"prefix": "lvchk",
+		"body": [
+			"CheckboxListTile(",
+			"  value: true,",
+			"  onChanged: ((bool) {",
+			"    //TODO:焦点改变的监听事件写在这里：",
+			"  }),",
+			"  title: Text('$3'),",
+			"  subtitle: Text('$4'),",
+			"  selected: true,",
+			"  activeColor: Colors.teal,",
+			"),"
+		],
+		"description": "创建带有CheckboxListTile的ListView"
+	},
+	"创建带有SwitchListTile的ListView": {
+		"prefix": "lvsw",
+		"body": [
+			"SwitchListTile(",
+			"  value: true,",
+			"  onChanged: ((bool) {",
+			"   //TODO:焦点改变的监听事件写在这里：",
+			"  }),",
+			"  title: Text('$5'),",
+			"  subtitle: Text('$5'),",
+			"  //如果subtitle文字过长，将会以三行显示",
+			"  isThreeLine: true,",
+			"  selected: true,",
+			"  activeColor: Colors.teal,",
+			"  //SwitchListTile左边的图标",
+			"  secondary: Icon(Icons.account_circle),",
+			"),"
+		],
+		"description": "创建带有SwitchListTile的ListView"
+	},
+	"创建方法": {
+		"prefix": "me",
+		"body": [
+			"void $1(){",
+			"  //TODO",
+			"}"
+		],
+		"description": "创建方法"
+	},
+	"创建私有方法": {
+		"prefix": "mep",
+		"body": [
+			"void _$1(){",
+			"  //TODO",
+			"}"
+		],
+		"description": "创建私有方法"
+	},
+	"创建SizedBox": {
+		"prefix": "sizeb",
+		"body": [
+			"SizedBox();"
+		],
+		"description": "创建SizedBox"
+	},
+	"创建SingleChildScrollView": {
+		"prefix": "sgsv",
+		"body": [
+			"SingleChildScrollView(",
+			"  scrollDirection: Axis.vertical,",
+			"  padding: EdgeInsets.all($1),",
+			"  controller: $2,",
+			"  child: $3,",
+			");"
+		],
+		"description": "创建SingleChildScrollView"
+	},
+	"创建StatefulWidget": {
+		"prefix": "stafwgt",
+		"body": [
+			"import 'package:flutter/widgets.dart';",
+			"import 'package:flutter/material.dart';",
+			"import 'package:ricent_core/ricent_core.dart';",
+			"",
+			"class $1 extends StatefulWidget {",
+			"  @override",
+			"  _$1State createState() => _$1State();",
+			"}",
+			"",
+			"class _$1State extends State<$1> {",
+			"  _$1Ctrl ctrl;",
+			"  @override",
+			"  void initState() {",
+			"    super.initState();",
+			"    ctrl = _$1Ctrl();",
+			"  }",
+			"",
+			"  @override",
+			"  void dispose() {",
+			"    ctrl.dispose();",
+			"    super.dispose();",
+			"  }",
+			"  ",
+			"  @override",
+			"  Widget build(BuildContext context) {",
+			"   return Scaffold(",
+			"     appBar: AppBar(",
+			"       centerTitle: true,",
+			"       title: Text('标题'),",
+			"     ),",
+			"     body: Column(),",
+			"   );",
+			"  }",
+			"}",
+			"class _$1Ctrl extends ControllerBase{",
+			"  _$1Ctrl(){}",
+			"  @override",
+			"  void dispose() {",
+			"  }",
+			"}"
+		],
+		"description": "创建StatefulWidget"
+	},
+	"创建StatefulWidget（带有 AnimationController）": {
+		"prefix": "stafwgtanim",
+		"body": [
+			"import 'package:flutter/widgets.dart';",
+			"import 'package:ricent_core/ricent_core.dart';",
+			"",
+			"class $1 extends StatefulWidget {",
+			"  @override",
+			"  _$1State createState() => _$1State();",
+			"}",
+			"",
+			"class _$1State extends State<$1> with SingleTickerProviderStateMixin {",
+			"  _$1Ctrl ctrl;",
+			"  AnimationController _controller;",
+			"",
+			"  @override",
+			"  void initState() {",
+			"    super.initState();",
+			"    _controller = AnimationController(vsync: this);",
+			"    ctrl = _$1Ctrl();",
+			"  }",
+			"",
+			"  @override",
+			"  void dispose() {",
+			"    _controller.dispose();",
+			"    ctrl.dispose();",
+			"    super.dispose();",
+			"  }",
+			"  ",
+			"  @override",
+			"  Widget build(BuildContext context) {",
+			"    return Container($2);",
+			"  }",
+			"}",
+			"class _$1Ctrl extends ControllerBase{",
+			"  _$1Ctrl(){}",
+			"  @override",
+			"  void dispose() {",
+			"  }",
+			"}"
+		],
+		"description": "创建StatefulWidget（带有 AnimationController）"
+	},
+	"创建完整的StatefulWidget，包含生命周期相关方法。": {
+		"prefix": "stafwgcycle",
+		"body": [
+			"import 'package:flutter/widgets.dart';",
+			"import 'package:ricent_core/ricent_core.dart';",
+			"",
+			"class $1 extends StatefulWidget {",
+			"  @override",
+			"  $1State createState() => $1State();",
+			"}",
+			"",
+			"class $1State extends State<$1> {",
+			"  _$1Ctrl ctrl;",
+			"  @override",
+			"  Widget build(BuildContext context) {",
+			"    return Scaffold(",
+			"      appBar: AppBar(",
+			"        title: Text('$2'),",
+			"      ),",
+			"    );",
+			"  }",
+			"  @override",
+			"  void initState() {",
+			"    super.initState();",
+			"    ctrl = _$1Ctrl();",
+			"  }",
+			"  ",
+			"  @override",
+			"  void dispose() {",
+			"    ctrl.dispose();",
+			"    super.dispose();",
+			"  }",
+			"  ",
+			"  @override",
+			"  void didUpdateWidget($1 oldWidget) {",
+			"    // TODO: implement didUpdateWidget",
+			"    super.didUpdateWidget(oldWidget);",
+			"  }",
+			"  ",
+			"  @override",
+			"  void didChangeDependencies() {",
+			"    // TODO: implement didChangeDependencies",
+			"    super.didChangeDependencies();",
+			"  }",
+			"}",
+			"class _$1Ctrl extends ControllerBase{",
+			"  _$1Ctrl(){}",
+			"  @override",
+			"  void dispose() {",
+			"  }",
+			"}"
+		],
+		"description": "创建完整的StatefulWidget，包含生命周期相关方法。"
+	},
+	"创建StatelessWidget": {
+		"prefix": "stal",
+		"body": [
+			"class $1 extends StatelessWidget {",
+			"  @override",
+			"  Widget build(BuildContext context) {",
+			"    return Scaffold(",
+			"      appBar: AppBar(",
+			"        title: Text('$2'),",
+			"      ),",
+			"    );",
+			"  }",
+			"}"
+		],
+		"description": "创建StatelessWidget"
+	},
+	"创建一个标准的Text": {
+		"prefix": "text",
+		"body": [
+			"RcText('$1',",
+			"  style: Theme.of(context).textTheme.$2",
+			"  overflow: TextOverflow.$3,",
+			"  locale: Localizations.localeOf(context),",
+			"),"
+		],
+		"description": "创建一个标准的Text"
+	},
+	"创建一个Store": {
+		"prefix": "store",
+		"body": [
+			"",
+			"class $1Store extends StoreBase {",
+			"  $1Store() {}",
+			"",
+			"  @override",
+			"  void dispose() {}",
+			"}",
+			"",
+			"class $1StoreWidget extends StatelessWidget {",
+			"  final Widget child;",
+			"  const $1StoreWidget({@required this.child});",
+			"  @override",
+			"  Widget build(BuildContext context) {",
+			"    return StoreProvider<$1Store>(",
+			"      builder: (context, List stores) {",
+			"        return stores.firstWhere(",
+			"          (test) => test is $1Store,",
+			"          orElse: () => $1Store(),",
+			"        );",
+			"      },",
+			"      child: child,",
+			"    );",
+			"  }",
+			"}"
+		],
+		"description": "创建一个Store"
+	}
+}
