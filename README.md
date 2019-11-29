@@ -1,2 +1,15 @@
-# vscode_plugin_flutter_snippets
-vscode 公司内部的简单的代码片段
+# ricent-flutter-snippets README
+
+flutter代码片段
+
+## Release Notes
+
+发布日志
+
+### 1.0.1
+
+更新第一个版本
+
+### 1.0.2
+
+新增api

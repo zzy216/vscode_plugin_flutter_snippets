@@ -1,0 +1,21 @@
+{
+    "name": "ricent-flutter-snippets",
+    "displayName": "ricent_flutter_snippets",
+    "publisher": "zhangzhengyong",
+    "description": "",
+    "version": "0.0.2",
+    "engines": {
+        "vscode": "^1.39.0"
+    },
+    "categories": [
+        "Snippets"
+    ],
+    "contributes": {
+        "snippets": [
+            {
+                "language": "dart",
+                "path": "./snippets/snippets.json"
+            }
+        ]
+    }
+}
