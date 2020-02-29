@@ -18,3 +18,6 @@ flutter代码片段
 1.修复route的argument参数错误的问题
 
 2.新增appmain作为app客户端配置
+
+### 1.0.4
+1.增加report创建一个报表
