@@ -1,38 +1,34 @@
-# vscode插件开发、发布主要流程
+# ricent-flutter-snippets README
 
-[官网](https://marketplace.visualstudio.com/manage)
+flutter代码片段
 
-插件开发前的准备：vscode、nodejs、vscode插件生产工具、git、微软账号
-插件开发：插件构思、官方文档查阅
-插件发布：打包、上传、插件市场操作
-插件维护：更新迭代后打包、上传、插件市场操作 
+## Release Notes
 
-## 插件开发前的准备：
+发布日志
 
-vscode插件生产工具：官方推荐使用Yeoman 和 VS Code Extension Generator。用如下命令安装：
+### 1.0.1
 
-    npm install -g yo generator-code
+更新第一个版本
 
-### 插件开发
+### 1.0.2
 
-使用生产工具初始化代码
+新增api
 
-    yo code
+### 1.0.3
+1.修复route的argument参数错误的问题
 
-在os系统上通过上下键来选择要创建的类型，在win上输入1、2、3后按回车来选择。
+2.新增appmain作为app客户端配置
 
-### 插件发布
-安装打包、发布工具
+### 1.0.4
+1.增加report创建一个报表
 
-    npm install -g vsce
+### 1.0.5
+1.优化staf的引用，并且支持[stafwg,staf]两种模式
 
-### 打包
-执行如下命令：
+2.增加前缀[stafsearch,search]，增加StatefulWidget带AppBar和搜索框
 
-    vsce package
+3.增加前缀["rcmustaf","rcmustafwg"],创建瑞信的模块子页RcScaffoldModuleMain的StatefulWidget
 
-### 发布
-方法一：用vsce的vsce publish工具来发布，但是需要在官网配置Personal Access Token较为繁琐。可参考官方教程
-https://yanyunianhua.visualstudio.com/_usersSettings/tokens
+4.增加前缀["rccstaf","rccstafwg"],创建瑞信的模块主页RcScaffoldModuleChild的StatefulWidget
 
-方法二：在官网直接上传发布https://marketplace.visualstudio.com/
+5.增加前缀["rcmastaf","rcmastafwg"],创建瑞信的主页 StatefulWidget

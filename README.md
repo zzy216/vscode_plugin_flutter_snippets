@@ -1,23 +1,40 @@
-# ricent-flutter-snippets README
 
-flutter代码片段
 
-## Release Notes
+# vscode插件开发、发布主要流程
 
-发布日志
+[官网](https://marketplace.visualstudio.com/manage)
 
-### 1.0.1
+插件开发前的准备：vscode、nodejs、vscode插件生产工具、git、微软账号
+插件开发：插件构思、官方文档查阅
+插件发布：打包、上传、插件市场操作
+插件维护：更新迭代后打包、上传、插件市场操作 
 
-更新第一个版本
+## 插件开发前的准备：
 
-### 1.0.2
+vscode插件生产工具：官方推荐使用Yeoman 和 VS Code Extension Generator。用如下命令安装：
 
-新增api
+    npm install -g yo generator-code
 
-### 1.0.3
-1.修复route的argument参数错误的问题
+### 插件开发
 
-2.新增appmain作为app客户端配置
+使用生产工具初始化代码
 
-### 1.0.4
-1.增加report创建一个报表
+    yo code
+
+在os系统上通过上下键来选择要创建的类型，在win上输入1、2、3后按回车来选择。
+
+### 插件发布
+安装打包、发布工具
+
+    npm install -g vsce
+
+### 打包
+执行如下命令：
+
+    vsce package
+
+### 发布
+方法一：用vsce的vsce publish工具来发布，但是需要在官网配置Personal Access Token较为繁琐。可参考官方教程
+https://yanyunianhua.visualstudio.com/_usersSettings/tokens
+
+方法二：在官网直接上传发布https://marketplace.visualstudio.com/
