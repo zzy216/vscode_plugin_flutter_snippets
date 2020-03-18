@@ -32,3 +32,6 @@ flutter代码片段
 4.增加前缀["rccstaf","rccstafwg"],创建瑞信的模块主页RcScaffoldModuleChild的StatefulWidget
 
 5.增加前缀["rcmastaf","rcmastafwg"],创建瑞信的主页 StatefulWidget
+
+### 1.0.6
+整理部分代码内容，增加文档

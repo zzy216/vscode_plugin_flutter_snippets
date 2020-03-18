@@ -1,40 +1,32 @@
+# 快捷键
 
-
-# vscode插件开发、发布主要流程
-
-[官网](https://marketplace.visualstudio.com/manage)
-
-插件开发前的准备：vscode、nodejs、vscode插件生产工具、git、微软账号
-插件开发：插件构思、官方文档查阅
-插件发布：打包、上传、插件市场操作
-插件维护：更新迭代后打包、上传、插件市场操作 
-
-## 插件开发前的准备：
-
-vscode插件生产工具：官方推荐使用Yeoman 和 VS Code Extension Generator。用如下命令安装：
-
-    npm install -g yo generator-code
-
-### 插件开发
-
-使用生产工具初始化代码
-
-    yo code
-
-在os系统上通过上下键来选择要创建的类型，在win上输入1、2、3后按回车来选择。
-
-### 插件发布
-安装打包、发布工具
-
-    npm install -g vsce
-
-### 打包
-执行如下命令：
-
-    vsce package
-
-### 发布
-方法一：用vsce的vsce publish工具来发布，但是需要在官网配置Personal Access Token较为繁琐。可参考官方教程
-https://yanyunianhua.visualstudio.com/_usersSettings/tokens
-
-方法二：在官网直接上传发布https://marketplace.visualstudio.com/
+prefix | 介绍 
+--- | --- |
+fb | 创建FutureBuilder
+rcsb,sb | 创建RcStreamBuilder 
+cent | 创建Center
+col | 创建Column
+spcol,rccol | 创建RcSparatedColumn
+row | 创建Row
+sprow,rcrow | 创建RcSparatedRow
+cont | 创建完整的Container
+lv,listv | 创建基本的ListView
+lvb,listb | 创建ListView.builder
+lvsp,listp | 创建带分割线的ListView.separated 
+me | 创建方法
+mep | 创建私有方法
+sizeb | 创建SizedBox
+sgsv | 创建SingleChildScrollView
+staf,stafwg | 创建StatefulWidget 
+stafwgtanim | 创建StatefulWidget（带有 AnimationController）
+stafwgcycle | 创建完整的StatefulWidget，包含生命周期相关方法。
+stal | 创建一个无态的子页面
+text | 创建一个标准的Text
+route | 创建一个路由设置页
+store | 创建一个Store
+api | 创建一个Api类
+appmain | 创建一个App应用入口 
+stafmain| 创建瑞信的主页 StatefulWidget
+stafmmain,stafmo | 创建瑞信的模块主页RcScaffoldModuleMain的StatefulWidget
+stafmc|创建瑞信的模块主页RcScaffoldModuleChild的StatefulWidget 
+rctile|tile 创建RcListTile
