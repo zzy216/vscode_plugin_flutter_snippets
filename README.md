@@ -30,3 +30,6 @@ stafmain| 创建瑞信的主页 StatefulWidget
 stafmmain,stafmo | 创建瑞信的模块主页RcScaffoldModuleMain的StatefulWidget
 stafmc|创建瑞信的模块主页RcScaffoldModuleChild的StatefulWidget 
 rctile|tile 创建RcListTile
+reportstaf | rcreport创建报表列表
+rcform | rcformstaf创建Form表单页面
+rcdetail | detailstaf创建详情查看
