@@ -42,3 +42,7 @@ flutter代码片段
 3. 新增['rcform','rcformstaf']创建Form表单页面
 4. 新增["rcdetail","detailstaf"]创建详情查看
 5. 更新appmain的内容
+
+### 0.0.8
+1. 更新['rcstore', 'rcstoreregion']创建一个store
+2. 更新['rcstorewidget','rcstoreenter']创建store的widget
